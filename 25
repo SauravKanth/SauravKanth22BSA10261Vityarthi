@@ -1,0 +1,11 @@
+def is_fibonacci_prime(n):
+    # 25. N is Fibonacci & prime
+    def is_prime(x):
+        if x < 2: return False
+        for i in range(2, int(x ** 0.5) + 1):
+            if x % i == 0: return False
+        return True
+    a, b = 0, 1
+    while b < n:
+        a, b = b, a + b
+    return b == n and is_prime(n)
