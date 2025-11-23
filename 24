@@ -1,0 +1,7 @@
+def order_mod(a, n):
+    # 24. Smallest k so that a^k ≡ 1 mod n
+    k, t = 1, a % n
+    while t != 1:
+        t = (t * a) % n
+        k += 1
+    return k
