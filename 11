@@ -1,0 +1,3 @@
+def count_distinct_prime_factors(n):
+    # 11. Number of unique prime factors
+    return len(set(prime_factors(n)))
