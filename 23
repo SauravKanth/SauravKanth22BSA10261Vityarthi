@@ -1,0 +1,4 @@
+
+def is_quadratic_residue(a, p):
+    # 23. Is x^2 ≡ a mod p solvable?
+    return any((x * x) % p == a % p for x in range(p))
