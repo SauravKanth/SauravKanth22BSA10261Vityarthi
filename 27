@@ -1,0 +1,8 @@
+def is_perfect_power(n):
+    # 27. n = a^b, a > 0, b > 1
+    from math import log, isclose
+    for b in range(2, int(log(n, 2)) + 2):
+        a = round(n ** (1 / b))
+        if a > 0 and a ** b == n:
+            return True
+    return False
