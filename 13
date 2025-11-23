@@ -1,0 +1,10 @@
+def is_mersenne_prime(p):
+    # 13. Is 2^p-1 prime, p is prime
+    def is_prime(n):
+        if n < 2: return False
+        for i in range(2, int(n ** 0.5) + 1):
+            if n % i == 0: return False
+        return True
+    if not is_prime(p): return False
+    m = 2 ** p - 1
+    return is_prime(m)
