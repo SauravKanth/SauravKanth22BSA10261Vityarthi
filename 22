@@ -1,0 +1,14 @@
+def crt(remainders, moduli):
+    # 22. Chinese Remainder Theorem solver
+    from functools import reduce
+    def mul_inv(a, m):
+        for x in range(1, m):
+            if (a * x) % m == 1:
+                return x
+        return None
+    total = 0
+    prod = reduce(lambda a, b: a * b, moduli)
+    for r, m in zip(remainders, moduli):
+        p = prod // m
+        total += r * mul_inv(p, m) * p
+    return total % prod
