@@ -1,0 +1,12 @@
+def is_prime_power(n):
+    # 12. Is n = p^k where p is prime, k >= 1
+    for p in range(2, n + 1):
+        if all(p % d for d in range(2, p)):
+            k = 1
+            x = p
+            while x < n:
+                if x * p == n:
+                    return True
+                x *= p
+                k += 1
+    return False
