@@ -1,0 +1,10 @@
+def mod_exp(base, exponent, modulus):
+    # 20. Modular exponentiation
+    result = 1
+    base %= modulus
+    while exponent > 0:
+        if exponent % 2:
+            result = (result * base) % modulus
+        base = (base * base) % modulus
+        exponent //= 2
+    return result
