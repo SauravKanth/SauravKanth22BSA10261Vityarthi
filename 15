@@ -1,0 +1,3 @@
+def count_divisors(n):
+    # 15. Number of positive divisors
+    return sum(1 for i in range(1, n + 1) if n % i == 0)
