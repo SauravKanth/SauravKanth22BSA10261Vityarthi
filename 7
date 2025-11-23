@@ -1,0 +1,4 @@
+def is_harshad(n):
+    # 7. N is Harshad
+    s = sum(int(d) for d in str(n))
+    return n % s == 0 if s != 0 else False
