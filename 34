@@ -1,0 +1,8 @@
+
+def partition_function(n):
+    # 34. Number of integer partitions
+    p = [1] + [0] * n
+    for k in range(1, n + 1):
+        for i in range(k, n + 1):
+            p[i] += p[i - k]
+    return p[n]
