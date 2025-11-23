@@ -1,1 +1,2 @@
 # SauravKanth22BSA10261Vityarthi
+This repository contains a collection of 34 Python functions that cover classic mathematical algorithms and number theory concepts, designed for students and programmers learning math-oriented coding with Python. Each function implements a well-known property or check, including factorial, palindrome detection, prime factorization, modular arithmetic, sequence generation, divisor computations, and more.
