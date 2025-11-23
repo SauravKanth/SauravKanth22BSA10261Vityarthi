@@ -1,0 +1,5 @@
+def digital_root(n):
+    # 4. Digital root
+    while n >= 10:
+        n = sum(int(d) for d in str(n))
+    return n
