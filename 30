@@ -1,0 +1,12 @@
+def is_carmichael(n):
+    # 30. Carmichael number check (basic test, not exhaustive)
+    def is_prime(x):
+        if x < 2: return False
+        for i in range(2, int(x ** 0.5) + 1):
+            if x % i == 0: return False
+        return True
+    if is_prime(n): return False
+    for a in range(2, n):
+        if gcd(a, n) == 1 and mod_exp(a, n - 1, n) != 1:
+            return False
+    return True
