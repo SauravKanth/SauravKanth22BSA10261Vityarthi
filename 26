@@ -1,0 +1,8 @@
+def lucas_sequence(n):
+    # 26. First n Lucas numbers
+    seq = []
+    a, b = 2, 1
+    for _ in range(n):
+        seq.append(a)
+        a, b = b, a + b
+    return seq
