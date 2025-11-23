@@ -1,0 +1,3 @@
+def aliquot_sum(n):
+    # 16. Aliquot sum: sum of proper divisors
+    return sum(i for i in range(1, n) if n % i == 0)
