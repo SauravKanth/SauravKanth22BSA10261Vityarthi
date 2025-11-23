@@ -1,0 +1,3 @@
+def are_amicable(a, b):
+    # 17. Are a, b amicable
+    return aliquot_sum(a) == b and aliquot_sum(b) == a
