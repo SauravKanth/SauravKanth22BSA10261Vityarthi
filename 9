@@ -1,0 +1,5 @@
+def is_pronic(n):
+    # 9. N is pronic
+    from math import isqrt
+    k = isqrt(n)
+    return k * (k + 1) == n or (k - 1) * k == n
